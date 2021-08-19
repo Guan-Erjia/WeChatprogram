@@ -1,0 +1,39 @@
+<view class="pyg-index">
+  <SearchInput></SearchInput>
+  <view class="index-swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator>
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="nav">
+    <navigator wx:for="{{navigator}}" class="nav-item" wx:key='name'>
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+  <view class="floor">
+    <view class="floor-item" wx:for="{{floordata}}" wx:key="name">
+      <view class="item-title">
+        <image src="{{item.floor_title.image_src}}" lazy-load="false"></image>
+      </view>
+      <view class="item-image">
+        <view class="item-left">
+          <image src="{{item.product_list[0].image_src}}" lazy-load="false"></image>
+        </view>
+        <view class="item-right">
+          <view class="litm">
+            <image src="{{item.product_list[1].image_src}}" lazy-load="false"></image>
+            <image src="{{item.product_list[2].image_src}}" lazy-load="false"></image>
+          </view>
+          <view class="litm">
+            <image src="{{item.product_list[3].image_src}}" lazy-load="false"></image>
+            <image src="{{item.product_list[4].image_src}}" lazy-load="false"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

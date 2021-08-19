@@ -1,0 +1,86 @@
+#goods_detail {
+  padding-bottom: 110rpx;
+}
+swiper {
+  height: 70vw;
+  text-align: center;
+}
+image {
+  width: 60%;
+}
+.info {
+  height: 150rpx;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 30rpx;
+  padding: 0rpx 20rpx;
+}
+.left {
+  width: 80%;
+  text-align: left;
+}
+.right {
+  flex-grow: 1;
+}
+.price {
+  color: rgb(245, 112, 3);
+  font-size: 40rpx;
+}
+.goods_name {
+  font-size: 30rpx;
+}
+.bottom-text {
+  font-size: 37rpx;
+  color: rgb(245, 80, 3);
+  padding: 20rpx 20rpx;
+}
+.bottom {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background-color: white;
+  height: 110rpx;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-left: 10rpx;
+  border-top: 2rpx solid #ccc;
+}
+.tool-item {
+  font-size: 25rpx;
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tool-item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  max-width: 10rpx;
+}
+.btn-cart {
+  color: white;
+  background-color: orange;
+  font-size: 37rpx;
+  flex: 2;
+  height: 100%;
+  line-height: 110rpx;
+}
+.btn-buy {
+  color: white;
+  background-color: tomato;
+  font-size: 37rpx;
+  flex: 2;
+  height: 100%;
+  line-height: 110rpx;
+}
+.detail {
+  border-top: 5rpx solid rgb(224, 222, 222);
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "SearchInput": "../../components/SearchInput/SearchInput"
+  },
+  "navigationBarTitleText": "周海文的吊炸天列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

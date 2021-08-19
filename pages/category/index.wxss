@@ -1,0 +1,48 @@
+view {
+  /* color: var(--themeColor); */
+  font-size: 28rpx;
+}
+.cate{
+  background-color: #fff;
+  display: flex;
+  height: calc(100vh - 90rpx);
+}
+.left-item{
+  height: 90rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+  border: 2rpx solid rgb(221, 217, 217);
+}
+.left{
+  flex: 1;
+}
+.right{
+  flex: 3;
+  display: flex;
+  font-size: 25rpx;
+}
+.right-title{
+  font-size: 35rpx;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+
+}
+.rignt-info{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item{
+  width: 33%;
+  text-align: center;
+}
+.item image{
+  width:60%;
+}
+.activeClick{
+  color: red;
+  border-left: 10rpx solid red;
+}
