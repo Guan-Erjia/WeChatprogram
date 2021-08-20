@@ -37,7 +37,7 @@
       <view class="iconfont icon-kefu"></view>
       <view>购物车</view>
     </navigator>
-    <view class="btn-cart">
+    <view class="btn-cart" bindtap="addGoods">
       加入购物车
     </view>
     <view class="btn-buy">

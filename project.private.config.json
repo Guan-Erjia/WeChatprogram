@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/goods_detail/index",
-          "pathName": "pages/goods_detail/index",
+          "name": "pages/cart/index",
+          "pathName": "pages/cart/index",
           "query": "goods_id=47869",
           "scene": null
         }

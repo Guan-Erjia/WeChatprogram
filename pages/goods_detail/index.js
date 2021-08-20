@@ -27,4 +27,28 @@ Page({
       current: e.currentTarget.dataset.url.pics_big,
     });
   },
+  addGoods(e) {
+    let cartdata = wx.getStorageSync("cartdata") || [];
+    let index = cartdata.findIndex(
+      (v) => v.goods_id === this.goodsInfo.goods_id
+    );
+    if (index === -1) {
+      this.goodsInfo.num = 1;
+      this.goodsInfo.checked = true;
+      cartdata.push(this.goodsInfo);
+    } else {
+      cartdata[index].num++;
+    }
+    wx.setStorageSync("cartdata", cartdata);
+    wx -
+      wx.showToast({
+        title: "加入了一件商品",
+        duration: 1500,
+        icon: "success",
+        mask: true,
+        success: (res) => {},
+        fail: (res) => {},
+        complete: (res) => {},
+      });
+  },
 });
