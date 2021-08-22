@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "周海文的吊炸天个人",
+  "backgroundColor": "#666"
 }

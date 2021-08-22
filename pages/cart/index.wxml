@@ -39,6 +39,6 @@
       <view><span>合计：</span><span style="font-size: 40rpx; color: rgb(255, 102, 0);">￥{{totalPrice}}</span></view>
       <view>包含运费</view>
     </view>
-    <view class="sumcount">结算({{count}})</view>
+    <view class="sumcount" bindtap="account">结算({{count}})</view>
   </view>
 </view>

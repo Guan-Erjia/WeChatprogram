@@ -1,2 +1,63 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<navigator url="/pages/login/index" wx:if="{{!userInfo.nickName}}">登录</navigator>
+<view id="user">
+  <view class="user-image">
+    <image src="{{ userInfo.avatarUrl}}" class="back-image"></image>
+    <view class="user-info">
+      <image src="{{userInfo.avatarUrl}}" class="user-icon"></image>
+      <view>{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="collect-info">
+    <view>
+      <view class="item-count">0</view>
+      <view class="item-name">收藏店铺</view>
+    </view>
+    <view>
+      <view class="item-count">0</view>
+      <view class="item-name">收藏商品</view>
+    </view>
+    <view>
+      <view class="item-count">0</view>
+      <view class="item-name">关注商品</view>
+    </view>
+    <view>
+      <view class="item-count">0</view>
+      <view class="item-name">我的足迹</view>
+    </view>
+  </view>
+  <view class="order-title depart">我的订单</view>
+  <view class="order order-title">
+    <navigator class="order-item" url="/pages/order/index?type=1">
+      <view>
+        <image src="/icons/订单.png"></image>
+      </view>
+      <view>全部订单</view>
+    </navigator>
+    <navigator class="order-item" url="/pages/order/index?type=2">
+      <view>
+        <image src="/icons/待付款.png"></image>
+      </view>
+      <view>待付款</view>
+    </navigator>
+    <navigator class="order-item" url="/pages/order/index?type=3">
+      <view>
+        <image src="/icons/待收货.png"></image>
+      </view>
+      <view>待收货</view>
+    </navigator>
+    <navigator class="order-item" url="/pages/order/index?type=4">
+      <view>
+        <image src="/icons/退货.png"></image>
+      </view>
+      <view>退款/退货</view>
+    </navigator>
+  </view>
+  <view class="order-title depart">收货地址管理</view>
+  <view class="order-title depart connect">
+    <view class="connect">联系客服</view>
+    <view class="tel">13514518484</view>
+  </view>
+  <view class="order-title">意见反馈</view>
+  <view class="order-title">关于我们</view>
+  <view class="order-title depart">把应用推荐给其他人</view>
+</view>

@@ -1,2 +1,37 @@
-<!--pages/pay/index.wxml-->
-<text>pages/pay/index.wxml</text>
+<view id="pay">
+  <view class="title" wx:if="{{!addressdata.userName}}">
+    <button type="primary" plain="true" bindtap="chooseAddress">添加收货地址</button>
+  </view>
+  <view class="address" wx:else>
+    <view class="user-info">
+      <view>{{addressdata.userName}}</view>
+      <view>{{addressdata.provinceName+addressdata.cityName+addressdata.countyName+addressdata.detailInfo}}</view>
+    </view>
+    <view class="tel">{{addressdata.telNumber}}</view>
+  </view>
+  <view class="center">购物车</view>
+  <view class="info" wx:if="{{storageData[0]}}">
+    <view wx:for="{{storageData}}" wx:key="goods_id" class="items" wx:if="{{item.checked}}">
+      <view class="img">
+        <image src="{{item.goods_small_logo}}"></image>
+      </view>
+      <view class="right">
+        <view class="goods_name">
+          <view>{{item.goods_name}}</view>
+        </view>
+        <view class="flex">
+          <view class="price">￥{{item.goods_price}}</view>
+          <view class="num">X{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="empty" wx:else>购物车里空空如也</view>
+  <view class="bottom">
+    <view class="sumprice">
+      <view><span>合计：</span><span style="font-size: 40rpx; color: rgb(255, 102, 0);">￥{{totalPrice}}</span></view>
+      <view>包含运费</view>
+    </view>
+    <view class="sumcount" bindtap="payFor">支付({{count}})</view>
+  </view>
+</view>

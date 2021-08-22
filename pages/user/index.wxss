@@ -1,1 +1,75 @@
-/* pages/user/index.wxss */
+page {
+  background-color: rgb(243, 236, 236);
+  color: #777;
+}
+.back-image {
+  filter: blur(15rpx);
+  height: 500rpx;
+  position: fixed;
+  z-index: -1;
+}
+.user-info {
+  text-align: center;
+  width: 100%;
+  font-size: 35rpx;
+  color: white;
+}
+.user-icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  margin-top: 80rpx;
+  margin-bottom: 60rpx;
+}
+.collect-info {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  margin-top: 15%;
+  margin-left: 5%;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+}
+.collect-info view {
+  text-align: center;
+  flex: 1;
+  font-size: 30rpx;
+}
+.item-count {
+  color: orange;
+}
+.order {
+  display: flex;
+  border-radius: 10rpx;
+}
+.order-title {
+  background-color: white;
+  padding: 20rpx;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 30rpx;
+  display: flex;
+  border-radius: 10rpx;
+}
+.order-item {
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+  background-color: white;
+  padding: 20rpx;
+}
+.order-item image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.depart {
+  margin-top: 4%;
+}
+.connect {
+  flex: 1;
+}
+.tel {
+  flex: 1;
+  text-align: right;
+}

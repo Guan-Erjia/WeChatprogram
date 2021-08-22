@@ -9,7 +9,7 @@
       <view class="price">￥{{data.goods_price}}</view>
       <view class="goods_name">{{data.goods_name}}</view>
     </view>
-    <view class="right">
+    <view class="right {{isCollect?'collect':''}}" bindtap="collectGood">
       <text class="iconfont icon-shoucang"></text>
       <view>收藏</view>
     </view>

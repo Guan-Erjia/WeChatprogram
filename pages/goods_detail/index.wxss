@@ -24,7 +24,7 @@ image {
   flex-grow: 1;
 }
 .price {
-  color: rgb(245, 112, 3);
+  color: tomato;
   font-size: 40rpx;
 }
 .goods_name {
@@ -32,7 +32,7 @@ image {
 }
 .bottom-text {
   font-size: 37rpx;
-  color: rgb(245, 80, 3);
+  color: tomato;
   padding: 20rpx 20rpx;
 }
 .bottom {
@@ -83,4 +83,7 @@ image {
 }
 .detail {
   border-top: 5rpx solid rgb(224, 222, 222);
+}
+.collect {
+  color: orange;
 }

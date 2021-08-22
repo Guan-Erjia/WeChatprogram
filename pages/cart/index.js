@@ -107,6 +107,7 @@ Page({
             this.setData({
               storageData,
             });
+            this.refreshData();
           }
         },
       });
@@ -116,7 +117,7 @@ Page({
     this.setData({
       storageData,
     });
-    // wx.setStorageSync("cartdata", this.data.storageData);
+    wx.setStorageSync("cartdata", this.data.storageData);
     this.refreshData();
   },
   increase(e) {
@@ -137,5 +138,22 @@ Page({
     });
     this.refreshData();
     console.log(this.data.totalPrice);
+  },
+  account() {
+    if (this.data.addressdata.userName) {
+      if (this.data.count === 0) {
+        wx.showToast({
+          title: "请添加商品",
+        });
+      } else {
+        wx.navigateTo({
+          url: "/pages/pay/index",
+        });
+      }
+    } else {
+      wx.showToast({
+        title: "请添加收货地址",
+      });
+    }
   },
 });
