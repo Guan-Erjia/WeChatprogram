@@ -7,7 +7,7 @@ Page({
     total: 0,
   },
   QueryParams: {
-    query: "0",
+    query: "",
     cid: "",
     pagenum: 1,
     pagesize: 10,
@@ -40,7 +40,11 @@ Page({
     });
   },
   onLoad: function (options) {
-    this.QueryParams.cid = options.cid;
+    if (options.cid) {
+      this.QueryParams.cid = options.cid;
+    } else {
+      this.QueryParams.query = options.query;
+    }
     this.getData(this.QueryParams);
     wx.showLoading({
       title: "加载中",

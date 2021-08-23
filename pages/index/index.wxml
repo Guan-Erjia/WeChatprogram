@@ -26,13 +26,8 @@
           <image src="{{item.product_list[0].image_src}}" lazy-load="false"></image>
         </navigator>
         <view class="item-right">
-          <navigator class="litm">
-            <image src="{{item.product_list[1].image_src}}" lazy-load="false"></image>
-            <image src="{{item.product_list[2].image_src}}" lazy-load="false"></image>
-          </navigator>
-          <navigator class="litm">
-            <image src="{{item.product_list[3].image_src}}" lazy-load="false"></image>
-            <image src="{{item.product_list[4].image_src}}" lazy-load="false"></image>
+          <navigator class="item" url="{{item.navigator_url}}" wx:for="{{item.rightData}}" wx:key="image_src">
+            <image src="{{item.image_src}}" lazy-load="false"></image>
           </navigator>
         </view>
       </view>

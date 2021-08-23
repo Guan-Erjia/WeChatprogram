@@ -45,17 +45,17 @@ Page({
       responseType: "text",
     }).then((result) => {
       let a = result.data.message;
-      console.log(a);
       a.forEach((v) => {
         v.product_list.map((v) => {
           if (v.navigator_url) {
             let text = v.navigator_url.split("?");
             v.navigator_url = text[0] + "/index?" + text[1];
           }
-          console.log(v);
         });
+        let b = JSON.parse(JSON.stringify(v.product_list));
+        b.shift();
+        v.rightData = b;
       });
-
       this.setData({
         floordata: result.data.message,
       });

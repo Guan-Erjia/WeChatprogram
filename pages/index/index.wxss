@@ -6,48 +6,49 @@ swiper {
   width: 750rpx;
   height: 340rpx;
 }
-.index-swiper image{
+.index-swiper image {
   width: 100%;
 }
-.nav{
-display: flex;
+.nav {
+  display: flex;
 }
-.nav-item{
-flex: 1;
-padding: 20rpx;
+.nav-item {
+  flex: 1;
+  padding: 20rpx;
 }
-.nav-item image{
+.nav-item image {
   width: 100%;
 }
-.item-title{
+.item-title {
   height: 60rpx;
   margin: 10rpx;
 }
-.item-title image{
+.item-title image {
   height: 100%;
 }
-.item-image{
+.item-image {
   height: 400rpx;
   display: flex;
   margin: 10rpx;
 }
-.item-left{
-flex: 1;
-margin-right: 5rpx;
+.item-left {
+  flex: 1;
+  margin-right: 5rpx;
 }
-.item-right{
-flex: 2;
-height: 100%;
-}
-.litm{
+.item-right {
+  flex: 2;
+  height: 100%;
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+}
+.item {
+  width: 50%;
   height: 50%;
 }
-.litm image{
-  padding:5rpx
+.item image {
+  padding: 5rpx;
 }
-image{
+image {
   height: 100%;
   width: 100%;
 }
