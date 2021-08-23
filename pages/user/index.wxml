@@ -12,10 +12,10 @@
       <view class="item-count">0</view>
       <view class="item-name">收藏店铺</view>
     </view>
-    <view>
-      <view class="item-count">0</view>
+    <navigator url="/pages/collect/index">
+      <view class="item-count">{{collectCount}}</view>
       <view class="item-name">收藏商品</view>
-    </view>
+    </navigator>
     <view>
       <view class="item-count">0</view>
       <view class="item-name">关注商品</view>
@@ -57,7 +57,7 @@
     <view class="connect">联系客服</view>
     <view class="tel">13514518484</view>
   </view>
-  <view class="order-title">意见反馈</view>
+  <navigator class="order-title" url="/pages/feedback/index">意见反馈</navigator>
   <view class="order-title">关于我们</view>
   <view class="order-title depart">把应用推荐给其他人</view>
 </view>

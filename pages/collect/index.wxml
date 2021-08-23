@@ -1,2 +1,24 @@
-<!--pages/collect/index.wxml-->
-<text>pages/collect/index.wxml</text>
+<view id="collect">
+  <view class="title">
+    <view class="title-item {{index===currentIndex?'active':''}}" wx:for="{{title}}" wx:key="index" bindtap="itemClick"
+      data-item="{{index}}">
+      {{item}}
+    </view>
+  </view>
+  <view class="center">
+    <view class="center-item {{index===currentIndex2?'active2':''}}" wx:for="{{title2}}" wx:key="index"
+      bindtap="itemClick2" data-item="{{index}}">{{item}}</view>
+  </view>
+  <view class="collect-info">
+    <navigator class="collect-item" wx:for="{{collect}}" wx:key="goods_id"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      <view class="item-left">
+        <image src="{{item.goods_big_logo}}"></image>
+      </view>
+      <view class="item-rights">
+        <view class="desc">{{item.goods_name}}</view>
+        <view class="price">￥{{item.goods_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

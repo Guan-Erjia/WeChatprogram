@@ -1,8 +1,11 @@
 <view class="category">
-  <SearchInput></SearchInput>
+  <navigator url="/pages/search/index">
+    <SearchInput></SearchInput>
+  </navigator>
   <view class="cate">
     <scroll-view class="left" scroll-y="true">
-      <view bindtab="click" class="left-item {{index===currentIndex?'activeClick':''}}" wx:for="{{datalist}}" wx:key="*this" bind:tap="click" data-index="{{index}}">
+      <view bindtab="click" class="left-item {{index===currentIndex?'activeClick':''}}" wx:for="{{datalist}}"
+        wx:key="*this" bind:tap="click" data-index="{{index}}">
         {{item}}
       </view>
     </scroll-view>
@@ -10,8 +13,8 @@
       <view class="right-item" wx:for="{{dataitem}}" wx:key="cat_id">
         <view class="right-title">/ {{item.cat_name}} /</view>
         <view class="rignt-info">
-          <navigator class="item" wx:for="{{item.children}}"
-           wx:key="cat_id" url="/pages/goods_list/index?cid={{item.cat_id}}">
+          <navigator class="item" wx:for="{{item.children}}" wx:key="cat_id"
+            url="/pages/goods_list/index?cid={{item.cat_id}}">
             <image mode="widthFix" class="" src="{{item.cat_icon}}" lazy-load="{{true}}"></image>
             <view class="">{{item.cat_name}}</view>
           </navigator>

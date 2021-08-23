@@ -1,66 +1,50 @@
-// pages/search/index.js
+import { request, debounce } from "../../request/index";
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    message: [],
+    debouncefun: undefined,
+    isfocus: false,
+    inputtext: "",
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  getData(value) {
+    request({
+      url: "/goods/qsearch?query=" + value,
+    }).then((res) => {
+      this.setData({
+        message: res.data.message,
+      });
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  userInput(e) {
+    const { value } = e.detail;
+    if (!value.trim()) {
+      this.setData({
+        isfocus: false,
+      });
+      return;
+    }
+    this.setData({
+      isfocus: true,
+      inputtext: value,
+    });
+    this.data.debouncefun(value);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  cancel() {
+    this.setData({
+      message: [],
+      isfocus: false,
+      inputtext: "",
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onLoad() {
+    const debouncefun = debounce((inputdata) => {
+      this.getData(inputdata);
+    }, 1000);
+    this.setData({
+      debouncefun,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+});

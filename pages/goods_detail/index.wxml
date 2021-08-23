@@ -1,13 +1,13 @@
 <view id="goods_detail">
   <swiper autoplay indicator-dots circular>
-    <swiper-item wx:for="{{data.pics}}" wx:key="pics_id" bindtap="handlePrevew" data-url="{{item}}">
+    <swiper-item wx:for="{{dataInfo.pics}}" wx:key="pics_id" bindtap="handlePrevew" data-url="{{item}}">
       <image src="{{item.pics_big}}" mode="widthFix" mode="heightFix"></image>
     </swiper-item>
   </swiper>
   <view class="info">
     <view class="left">
-      <view class="price">￥{{data.goods_price}}</view>
-      <view class="goods_name">{{data.goods_name}}</view>
+      <view class="price">￥{{dataInfo.goods_price}}</view>
+      <view class="goods_name">{{dataInfo.goods_name}}</view>
     </view>
     <view class="right {{isCollect?'collect':''}}" bindtap="collectGood">
       <text class="iconfont icon-shoucang"></text>
@@ -18,7 +18,7 @@
   <view class="detail">
     <view class="bottom-text">图文详情</view>
     <view>
-      <rich-text nodes="{{data.goods_introduce}}"></rich-text>
+      <rich-text nodes="{{dataInfo.goods_introduce}}"></rich-text>
     </view>
   </view>
 

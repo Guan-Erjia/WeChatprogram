@@ -1,1 +1,37 @@
-/* pages/search/index.wxss */
+page {
+  background-color: rgb(216, 216, 216);
+}
+.input {
+  display: flex;
+  height: 70rpx;
+  font-size: 30rpx;
+}
+.input input {
+  background-color: white;
+  height: 100%;
+  flex: 4;
+  margin: 20rpx;
+}
+.input button {
+  flex: 1;
+  background-color: white;
+  height: 100%;
+  font-size: 30rpx;
+  width: 80rpx !important;
+  margin: 20rpx !important;
+  padding: 0;
+  line-height: 70rpx;
+  border-radius: 0;
+}
+.search-info {
+  margin: 40rpx 20rpx;
+  font-size: 30rpx;
+}
+.search-item {
+  margin-bottom: 10rpx;
+  padding: 15rpx 0;
+  background-color: whitesmoke;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

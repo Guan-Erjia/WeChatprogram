@@ -1,0 +1,10 @@
+image {
+  width: 105rpx;
+  height: 105rpx;
+}
+.icon {
+  position: relative;
+  top: -145rpx;
+  left: 80rpx;
+  z-index: 3;
+}

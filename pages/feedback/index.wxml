@@ -1,2 +1,24 @@
-<!--pages/feedback/index.wxml-->
-<text>pages/feedback/index.wxml</text>
+<view class="title">
+  <view class="title-item {{index===currentIndex?'active':''}}" wx:for="{{title}}" wx:key="index" bindtap="itemClick"
+    data-item="{{index}}">
+    {{item}}
+  </view>
+</view>
+<view class="text">问题的种类</view>
+<view class="kinds">
+  <view class="kinds-item">功能建议</view>
+  <view class="kinds-item">购买遇到问题</view>
+  <view class="kinds-item">性能问题</view>
+  <view class="kinds-item">其他</view>
+</view>
+<view id="area">
+  <textarea name="" id="textarea" cols="30" rows="10" placeholder="请描述一下您的问题"></textarea>
+  <view class="tools">
+    <button bindtap="chooseImage">+</button>
+    <UpImg wx:for="{{currentImages}}" src="{{item}}" wx:key="index" bindtap="cancelTap" data-item="{{index}}"></UpImg>
+    <view class="elem"></view>
+  </view>
+</view>
+<view class="submit">
+  <button bindtap="submitData">√提交</button>
+</view>

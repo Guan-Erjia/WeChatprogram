@@ -1,16 +1,18 @@
 <view class="pyg-index">
-  <SearchInput></SearchInput>
+  <navigator url="/pages/search/index">
+    <SearchInput></SearchInput>
+  </navigator>
   <view class="index-swiper">
     <swiper autoplay indicator-dots circular>
       <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator>
+        <navigator url="{{item.navigator_url}}">
           <image src="{{item.image_src}}" mode="widthFix"></image>
         </navigator>
       </swiper-item>
     </swiper>
   </view>
   <view class="nav">
-    <navigator wx:for="{{navigator}}" class="nav-item" wx:key='name'>
+    <navigator wx:for="{{navigator}}" class="nav-item" wx:key='name' url="/pages/category/index" open-type="switchTab">
       <image mode="widthFix" src="{{item.image_src}}"></image>
     </navigator>
   </view>
@@ -20,18 +22,18 @@
         <image src="{{item.floor_title.image_src}}" lazy-load="false"></image>
       </view>
       <view class="item-image">
-        <view class="item-left">
+        <navigator class="item-left" url="{{item.product_list[0].navigator_url}}">
           <image src="{{item.product_list[0].image_src}}" lazy-load="false"></image>
-        </view>
+        </navigator>
         <view class="item-right">
-          <view class="litm">
+          <navigator class="litm">
             <image src="{{item.product_list[1].image_src}}" lazy-load="false"></image>
             <image src="{{item.product_list[2].image_src}}" lazy-load="false"></image>
-          </view>
-          <view class="litm">
+          </navigator>
+          <navigator class="litm">
             <image src="{{item.product_list[3].image_src}}" lazy-load="false"></image>
             <image src="{{item.product_list[4].image_src}}" lazy-load="false"></image>
-          </view>
+          </navigator>
         </view>
       </view>
     </view>

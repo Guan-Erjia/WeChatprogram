@@ -1,5 +1,7 @@
 <view id="goods_list">
-  <SearchInput></SearchInput>
+  <navigator url="/pages/search/index">
+    <SearchInput></SearchInput>
+  </navigator>
   <view class="title">
     <view class="title-item {{index===currentIndex?'active':''}}" wx:for="{{title}}" wx:key="index" bindtap="itemClick"
       data-item="{{index}}">
@@ -7,7 +9,8 @@
     </view>
   </view>
   <view class="goods-list">
-    <navigator class="good-item" wx:for="{{goods}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    <navigator class="good-item" wx:for="{{goods}}" wx:key="goods_id"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
       <image src="{{item.goods_big_logo}}" lazy-load="true"></image>
       <view class="text">
         <view class="desc">{{item.goods_name}}</view>

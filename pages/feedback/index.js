@@ -1,66 +1,47 @@
 // pages/feedback/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    title: ["体验问题", "商品、商家投诉"],
+    currentIndex: 0,
+    currentImages: [],
+  },
+  itemClick(e) {
+    this.setData({
+      currentIndex: e.target.dataset.item,
+    });
+  },
+  chooseImage() {
+    wx.chooseImage({
+      count: 0,
+      success: (res) => {
+        let currentImages = this.data.currentImages;
+        res.tempFilePaths.forEach((v) => {
+          currentImages.push(v);
+        });
+        this.setData({
+          currentImages,
+        });
+      },
+    });
+  },
+  cancelTap(e) {
+    const a = e.currentTarget.dataset.item;
+    console.log(a);
+    const currentImages = this.data.currentImages;
+    currentImages.splice(a, 1);
+    this.setData({
+      currentImages,
+    });
+  },
+  submitData() {
+    const a = this.data.currentImages;
+    console.log(a);
+    wx.uploadFile({
+      filePath: "filePath",
+      name: "name",
+      url: "url",
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+  onLoad: function (options) {},
+});

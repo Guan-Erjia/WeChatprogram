@@ -1,1 +1,85 @@
-/* pages/feedback/index.wxss */
+page {
+  background-color: rgb(231, 231, 231);
+}
+.title {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  font-size: 35rpx;
+  box-shadow: 1rpx 1rpx 5rpx #888888;
+  background-color: white;
+}
+.title-item {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  line-height: 90rpx;
+}
+.active {
+  border-bottom: 10rpx solid red;
+}
+.text {
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+.kinds {
+  display: flex;
+  font-size: 30rpx;
+  flex-wrap: wrap;
+}
+.kinds-item {
+  background-color: white;
+  width: 28%;
+  text-align: center;
+  margin: 10rpx 20rpx;
+  padding: 20rpx 0;
+  white-space: nowrap;
+}
+#area {
+  width: calc(100vw - 40rpx);
+  background-color: white;
+  margin: 20rpx;
+}
+#textarea {
+  height: 300rpx;
+  color: #777;
+  padding: 20rpx;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  padding-left: 20rpx;
+}
+.tools button {
+  width: 115rpx !important;
+  height: 115rpx;
+  margin: 10rpx 10rpx !important;
+  padding: 0 !important;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  border: 2rpx solid #666;
+}
+.elem {
+  padding: 10rpx;
+}
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.submit button {
+  margin: 20rpx !important;
+  padding: 25rpx;
+  width: 250rpx !important;
+  color: white;
+  background-color: red;
+}
+UpImg {
+  width: 115rpx;
+  height: 115rpx;
+  margin: 10rpx;
+}

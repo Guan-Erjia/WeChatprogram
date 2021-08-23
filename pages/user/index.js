@@ -5,12 +5,18 @@ Page({
    */
   data: {
     userInfo: {},
+    collectCount: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    const count = wx.getStorageSync("collect");
+    this.setData({
+      collectCount: count.length,
+    });
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -22,7 +28,6 @@ Page({
       this.setData({
         userInfo,
       });
-      console.log(this.data.userInfo);
     }
   },
 });

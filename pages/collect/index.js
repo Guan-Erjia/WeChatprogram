@@ -1,66 +1,30 @@
 // pages/collect/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    collect: [],
+    title: ["商品收藏", "品牌收藏", "店铺收藏", "浏览足迹"],
+    title2: ["全部", "当前上映", "即将上线"],
+    currentIndex: 0,
+    currentIndex2: 0,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    const collect = wx.getStorageSync("collect");
+    this.setData({
+      collect,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  itemClick(e) {
+    this.setData({
+      currentIndex: e.currentTarget.dataset.item,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  itemClick2(e) {
+    this.setData({
+      currentIndex2: e.currentTarget.dataset.item,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+});

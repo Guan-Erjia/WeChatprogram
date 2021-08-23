@@ -17,7 +17,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#eb4450",
-    "navigationBarTitleText": "周海文的吊炸天平台",
+    "navigationBarTitleText": "周海文的吊炸天商城",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
@@ -27,8 +27,7 @@
     "backgroundColor": "#fafafa",
     "position": "bottom",
     "borderStyle": "black",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "icons/主页.png",
