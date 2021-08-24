@@ -10,7 +10,6 @@ Page({
       url: "/goods/detail?goods_id=" + options.goods_id,
     }).then((result) => {
       const collect = wx.getStorageSync("collect") || [];
-      console.log(result.data.message.goods_id);
       this.setData({
         dataInfo: {
           pics: result.data.message.pics,

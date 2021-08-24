@@ -53,11 +53,11 @@
     </navigator>
   </view>
   <view class="order-title depart">收货地址管理</view>
-  <view class="order-title depart connect">
+  <view class="order-title depart connect" bindtap="service">
     <view class="connect">联系客服</view>
     <view class="tel">13514518484</view>
   </view>
   <navigator class="order-title" url="/pages/feedback/index">意见反馈</navigator>
   <view class="order-title">关于我们</view>
-  <view class="order-title depart">把应用推荐给其他人</view>
+  <view class="order-title depart" bindtap="share">把应用推荐给其他人</view>
 </view>

@@ -1,16 +1,19 @@
 // pages/user/index.js
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     userInfo: {},
     collectCount: 0,
   },
+  service() {
+    console.log("aaa");
+    wx.makePhoneCall({
+      phoneNumber: "1340000", //仅为示例，并非真实的电话号码
+      fail: (res) => {
+        console.log(res);
+      },
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     const count = wx.getStorageSync("collect");
     this.setData({
@@ -18,9 +21,6 @@ Page({
     });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onShow: function () {
     const res = wx.getStorageSync("userInfo");
     if (res) {

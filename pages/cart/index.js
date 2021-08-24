@@ -137,7 +137,6 @@ Page({
       addressdata,
     });
     this.refreshData();
-    console.log(this.data.totalPrice);
   },
   account() {
     if (this.data.addressdata.userName) {
